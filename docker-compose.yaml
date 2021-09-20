@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres:alpine'
+    volumes:
+      - postgres-cdc-volume:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: casa_do_codigo
+volumes:
+  postgres-cdc-volume:

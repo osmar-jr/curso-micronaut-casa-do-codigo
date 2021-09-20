@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: casaDoCodigo
+
+jackson:
+  serialization:
+    writeDatesAsTimestamps=false:
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5433/casa_do_codigo
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    dialect: POSTGRES
+
+jpa.default.properties.hibernate.hbm2ddl.auto: update
